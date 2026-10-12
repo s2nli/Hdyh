@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b10">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="CODEX STUDYS">
+  <title>Batch — CODEX STUDYS</title>
+  <link rel="icon" href="assets/mj-icon-192.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="assets/mj-icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function(){var t=localStorage.getItem("codex-studys-theme");if(t&&t!=="system")document.documentElement.setAttribute("data-theme",t);})();</script>
+  <link rel="stylesheet" href="batch.css">
+  <link rel="stylesheet" href="lecture-player.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="back-btn" id="backBtn" type="button" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 5-7 7 7 7"/></svg></button>
+    <h1 class="top-title" id="topTitle">Loading…</h1>
+  </header>
+
+  <main class="page" id="page">
+    <div class="list"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+  </main>
+
+  <section class="lv" id="lv" role="dialog" aria-modal="true" aria-label="Lecture player">
+    <div class="lv-main">
+      <div class="lv-stage" id="lvStage">
+        <div id="lvRoot"></div>
+        <div class="lv-alt" id="lvAlt"></div>
+      </div>
+    </div>
+  </section>
+  <div class="toast" id="toast"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.13/hls.min.js"></script>
+  <script src="lecture-player.js"></script>
+  <script src="remote-api.js"></script>
+  <script src="remote-batch.js"></script>
+  <script src="batch.js"></script>
+</body>
+</html>
